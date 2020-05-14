@@ -2,9 +2,27 @@
   text-align: center;
 }
 
-.searchBar {
+.searchBar, .results {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.results {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+li {
+  list-style-type: none;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 1%;
+  padding-left: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 
 @media (prefers-reduced-motion: no-preference) {
