@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SearchBar() {
+function SearchBar(props) {
     const [search, setSearch] = useState();
 
     function handleInputChange(event) {
@@ -18,7 +18,7 @@ function SearchBar() {
                 <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1" onChange={handleInputChange} />
             </div>
             <br />
-            <button type="button" class="btn btn-info">Search</button>
+            <button type="button" className="btn btn-info" onClick={() => {props.searchBooks(search)}}>Search</button>
         </div>
     );
 }
