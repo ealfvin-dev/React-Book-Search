@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchBar {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
