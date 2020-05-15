@@ -25,6 +25,10 @@ li {
   border-style: solid;
 }
 
+.viewButton, .saveButton {
+  margin-right: 5%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

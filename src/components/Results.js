@@ -13,10 +13,16 @@ function Results(props) {
                             <h4>{book.volumeInfo.title}</h4>
                             <h5>{"Author(s): " + (book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "")}</h5>
                             <br />
-                            <div className="bookInfo">
-                                <img className="bookImg" height="10%" src={book.volumeInfo.imageLinks.smallThumbnail}/> <br/>
+                            <div>
+                                <img className="bookImg" height="10%" src={book.volumeInfo.imageLinks.smallThumbnail}/>
                                 <p className="bookDesc">{book.volumeInfo.description}</p>
                             </div>
+                            <span>
+                                <button className="saveButton">Save</button>
+                                <a href={book.volumeInfo.infoLink}>
+                                    <button className="viewButton">View</button>
+                                </a>
+                            </span>
                         </li>
                     )
                 })}
