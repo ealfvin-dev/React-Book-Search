@@ -1,5 +1,9 @@
 import React from "react";
 
+function saveBook() {
+    
+}
+
 function Results(props) {
     if(props.results.data) {
         return (
@@ -18,8 +22,8 @@ function Results(props) {
                                 <p className="bookDesc">{book.volumeInfo.description}</p>
                             </div>
                             <span>
-                                <button className="saveButton">Save</button>
-                                <a href={book.volumeInfo.infoLink}>
+                                <button className="saveButton" onClick="saveBook">Save</button>
+                                <a href={book.volumeInfo.infoLink} target="_blank">
                                     <button className="viewButton">View</button>
                                 </a>
                             </span>
