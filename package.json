@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ealfvin-dev/React-Book-Search/issues"
   },
-  "homepage": "https://github.com/ealfvin-dev/React-Book-Search#readme"
+  "homepage": "https://github.com/ealfvin-dev/React-Book-Search#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14"
+  }
 }
