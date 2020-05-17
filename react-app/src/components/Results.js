@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
+import BookAPI from '../utils/API';
 
-function saveBook() {
-    axios.post("/api/books", {});
+function saveBook(bookInfo) {
+   BookAPI.saveBook(bookInfo);
 }
 
 function Results(props) {
@@ -23,7 +23,7 @@ function Results(props) {
                                 <p className="bookDesc">{book.volumeInfo.description}</p>
                             </div>
                             <span>
-                                <button className="saveButton" onClick={saveBook}>Save</button>
+                                <button className="saveButton" onClick={() => {saveBook(book.volumeInfo)}}>Save</button>
                                 <a href={book.volumeInfo.infoLink} target="_blank">
                                     <button className="viewButton">View</button>
                                 </a>
