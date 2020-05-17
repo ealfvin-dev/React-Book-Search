@@ -1,11 +1,11 @@
 import React from "react";
-import BookAPI from '../utils/API';
-
-function saveBook(bookInfo) {
-   BookAPI.saveBook(bookInfo);
-}
+import BookAPI from '../utils/BookAPI';
 
 function Results(props) {
+    function saveBook(bookInfo) {
+        BookAPI.saveBook(bookInfo);
+    }
+
     if(props.results.data) {
         return (
             <div className="results">

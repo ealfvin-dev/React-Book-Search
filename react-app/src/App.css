@@ -7,6 +7,11 @@
   margin-right: 10%;
 }
 
+.jumbotron, .navbar {
+  margin-top: 0%;
+  margin-bottom: 0%
+}
+
 .results {
   margin-left: 10%;
   margin-right: 10%;

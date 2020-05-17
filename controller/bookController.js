@@ -6,13 +6,15 @@ module.exports = {
             title: "",
             authors: [],
             description: "",
-            image: ""
+            image: "",
+            link: ""
         };
         try {
             bookInfo.title = req.body.title;
+            bookInfo.image = req.body.imageLinks.smallThumbnail;
             bookInfo.authors = req.body.authors;
             bookInfo.description = req.body.description;
-            bookInfo.image = req.body.imageLinks.smallThumbnail;
+            bookInfo.link = req.body.infoLink;
         }
         finally {
             //pass
@@ -23,6 +25,11 @@ module.exports = {
     },
     getSavedBooks: function(req, res) {
         BookModel.find({})
+        .then(response => res.json(response))
+        .catch(err => res.status(422).json(err));
+    },
+    deleteBook: function(req, res) {
+        BookModel.deleteOne({_id: req.params.id})
         .then(response => res.json(response))
         .catch(err => res.status(422).json(err));
     }

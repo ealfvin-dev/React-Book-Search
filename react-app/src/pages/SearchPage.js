@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import SearchBar from '../components/SerarchBar';
 import Results from '../components/Results';
-import BookAPI from '../utils/API';
+import BookAPI from '../utils/BookAPI';
 
 function SearchPage() {
     const [results, setResults] = useState([]);

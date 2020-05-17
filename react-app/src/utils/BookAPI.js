@@ -8,6 +8,12 @@ const BookAPI = {
     },
     saveBook: function(body) {
         return axios.post("/api/savedbooks", body);
+    },
+    getSavedBooks: function() {
+        return axios.get("/api/savedbooks");
+    },
+    deleteBook: function(id) {
+        return axios.delete(`/api/savedbooks/${id}`);
     }
 }
 
