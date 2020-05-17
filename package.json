@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ealfvin-dev/React-Book-Search#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.14"
+    "mongoose": "^5.9.14",
+    "path": "^0.12.7"
   }
 }
