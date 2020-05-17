@@ -15,7 +15,6 @@ function SavedBooks(props) {
             <h2>Saved Books</h2>
             <ul>
             {props.results.map((book, i) => {
-                console.log(book);
                 return (
                     <li key={i}>
                         <h4>{book.title}</h4>
