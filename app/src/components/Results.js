@@ -12,7 +12,6 @@ function Results(props) {
                 <h2>Results</h2>
                 <ul>
                 {props.results.data.items.map((book, i) => {
-                    console.log(book);
                     return (
                         <li key={i}>
                             <h4>{book.volumeInfo.title}</h4>

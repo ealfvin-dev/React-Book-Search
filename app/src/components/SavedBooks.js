@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BookAPI from '../utils/BookAPI';
 
-function SavedBooks(props) {
+function SavedBooks() {
     const [deletedBook, setDeletedBook] = useState();
+    const [results, setResults] = useState([]);
 
     function deleteBook(id) {
         BookAPI.deleteBook(id).then((res) => {
@@ -10,11 +11,17 @@ function SavedBooks(props) {
         })
     }
 
+    useEffect(() => {
+        BookAPI.getSavedBooks().then((books) => {
+            setResults(books.data);
+        })
+    }, [deletedBook]);
+
     return (
         <div className="results">
             <h2>Saved Books</h2>
             <ul>
-            {props.results.map((book, i) => {
+            {results.map((book, i) => {
                 return (
                     <li key={i}>
                         <h4>{book.title}</h4>

@@ -4,18 +4,10 @@ import SavedBooks from '../components/SavedBooks';
 import BookAPI from '../utils/BookAPI';
 
 function SavedPage() {
-    const [results, setResults] = useState([]);
-
-    useEffect(() => {
-        BookAPI.getSavedBooks().then((books) => {
-            setResults(books.data);
-        })
-    }, []);
-
     return (
         <div>
             <Header />
-            <SavedBooks results={results}/>
+            <SavedBooks />
         </div>
     )
 }
