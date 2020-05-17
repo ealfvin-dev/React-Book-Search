@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BookAPI from '../utils/BookAPI';
 
 function SavedBooks(props) {
+    const [deletedBook, setDeletedBook] = useState();
+
     function deleteBook(id) {
-        BookAPI.deleteBook(id);
+        BookAPI.deleteBook(id).then((res) => {
+            setDeletedBook(id);
+        })
     }
 
     return (
